@@ -204,7 +204,7 @@ class AmmPriceExample(ScriptStrategyBase):
                 kind = "1"
 
             conflict = self.is_conflict(kind)
-            if conflict:
+            if conflict is True:
                 self.logger().info(f"Conflict detected for {base} to {quote}. Skipping.")
                 self.complete_async_task()
                 return
@@ -221,15 +221,15 @@ class AmmPriceExample(ScriptStrategyBase):
                 self.complete_async_task()
                 return
 
-            # 6th Step `check for pending txs`
-            pending_txs = await self.get_pending_txs()
-            if pending_txs is True:
-                self.logger().error("Handle pending txs")
-                self.complete_async_task()
-                return
+            # # 6th Step `check for pending txs`
+            # pending_txs = await self.get_pending_txs()
+            # if pending_txs is True:
+            #     self.logger().error("Handle pending txs")
+            #     self.complete_async_task()
+            #     return
 
             conflict = self.is_conflict(kind)
-            if conflict:
+            if conflict is True:
                 self.logger().info(f"Conflict detected for {base} to {quote}. Skipping.")
                 self.complete_async_task()
                 return
@@ -288,7 +288,9 @@ class AmmPriceExample(ScriptStrategyBase):
                 return True, base_diff, quote_diff
 
             self.logger().info("No profitable opportunities found above thresholds")
-            return False, Decimal(0), Decimal(0)
+            # return False, Decimal(0), Decimal(0)
+            return True, base_diff, quote_diff
+            
 
         except Exception as e:
             self.logger().error(f"Error in profit calculation: {str(e)}")
@@ -324,8 +326,7 @@ class AmmPriceExample(ScriptStrategyBase):
                 f"Minimum order amount {minimum_order_amount} is higher than maximum order amount {self.config.maximum_order_amount}. Skipping."
             )
             # return Decimal(0), Decimal(0)
-            return Decimal(100), Decimal(1)
-            
+            return Decimal(1000), Decimal(1)
 
         self.logger().info(f"Minimum order amount {minimum_order_amount}")
 
@@ -436,7 +437,7 @@ class AmmPriceExample(ScriptStrategyBase):
 
     async def execute_aam_trade(self, base: str, quote: str, amount: Decimal, price: Decimal, side: TradeType):
         self.logger().debug(
-            f"POST /amm/trade [ connector: {self.connector}, base: {base}, quote: {quote}, amount: {amount}, price: {price} side: {side} ]"
+            f"POST /amm/trade [ connector: {self.connector}, base: {base}, quote: {quote}, amount: {amount}, price: {price} side: {side}, pool_id: {self.pool_id}, type: {type(self.pool_id)} ]"
         )
         if side == TradeType.BUY:
             limit_price = Decimal(price * (1 + self.config.slippage_buffer))
@@ -598,42 +599,52 @@ class AmmPriceExample(ScriptStrategyBase):
   # ---------------------------- Mempool ---------------------------- 
   
     def decode_input(self, input_data: str, ws_tx_hash:str):
+        self.logger().info(f"self.ws_pending_txs: {self.ws_pending_txs}")
+        
         decoded_input = self.contract.decode_function_input(input_data)
-        method = decoded_input[0].signature
-        method_name = method.split('(')[0]
+        self.logger().info(f"Survived decode_input (0.1): {decoded_input}")
+        
+        method = str(decoded_input[0])
+        self.logger().info(f"Survived decode_input (0.2): {method}")
+        
         pool_id = None
         kind = None
+        self.logger().info(f"Survived decode_input (1):")
 
-        if 'swap' not in method_name:
+        if 'swap' not in method:
+            self.logger().info(f"Survived decode_input (1.3):")
             return False
 
-        if 'batchSwap' in function_signature:
+        self.logger().info(f"Survived decode_input (2):")
+        
+
+        if 'batchSwap' in method:
             # Extract the swaps array from decoded input
             swaps = decoded_input[1]['swaps']
-            
+
             # Iterate through all poolIds in the swaps array
             for index, swap in enumerate(swaps):
                 pool_id = Web3.to_hex(swap['poolId'])
                 self.logger().info(f"Pool ID {index + 1}: {pool_id}")
-                
+
             kind = decoded_input[1]['kind']
 
         else:
             pool_id = Web3.to_hex(decoded_input[1]['singleSwap']['poolId'])
             kind = decoded_input[1]['singleSwap']['kind']
 
-        self.logger().info('Method:', method)
-        self.logger().info('PoolId:', pool_id)
-        self.logger().info('Kind:', kind)
+        self.logger().info(f"'Method:', {method}")
+        self.logger().info(f"'PoolId:', {pool_id}")
+        self.logger().info(f"'Kind:', {kind}")
 
         if pool_id == self.pool_id: # 0 is the kind for swap
             if kind == 0:
                 self.logger().info("Swap kind is 0. Assigning to ws_pending_txs[0]")
-                self.ws_pending_txs[0].append(ws_tx_hash)
+                self.ws_pending_txs["0"].append(ws_tx_hash)
                 return True 
             elif kind == 1:
                 self.logger().info("Swap kind is 1. Assigning to ws_pending_txs[1]")
-                self.ws_pending_txs[1].append(ws_tx_hash)
+                self.ws_pending_txs["1"].append(ws_tx_hash)
                 return True
             else:
                 self.logger().info("Swap kind not recognized")
@@ -657,7 +668,7 @@ class AmmPriceExample(ScriptStrategyBase):
 
                     # Balancer transactions have a 'data' field
                     if 'input' in transaction:
-                        conflict = decode_input( transaction['input'], transaction['hash'])
+                        conflict = self.decode_input( transaction['input'], transaction['hash'])
                         self.logger().info(f"Conflict is: {conflict}")
                     else:
                         self.logger().info("No result in message")
@@ -665,21 +676,17 @@ class AmmPriceExample(ScriptStrategyBase):
                     self.logger().info("No result in message")
             except json.JSONDecodeError:
                 self.logger().info("Error decoding JSON")      
-            except websocket.exceptions.ConnectionClosed as e:
-                self.logger().info(f"WebSocket connection closed: {e}")
         
         def on_error(ws, error):
             """
             Callback for when an error occurs.
             """
-            
             self.logger().info(f"Error: {error}")
         
         def on_close(ws, close_status_code, close_msg):
             """
             Callback for when the WebSocket connection is closed.
             """
-            
             self.logger().info("WebSocket connection closed")
         
         def on_open(ws):
@@ -687,8 +694,8 @@ class AmmPriceExample(ScriptStrategyBase):
             Callback for when the WebSocket connection is opened.
             """
             self.logger().info("WebSocket connection established")
+
             # Subscribe to pending transactions
-            
             ws.send(json.dumps(self.subscription_pending_request))
         
         ws = websocket.WebSocketApp(
@@ -713,28 +720,25 @@ class AmmPriceExample(ScriptStrategyBase):
             self.logger().info(f"Checking for mined transactions: {message}")
             try:
                 message_json = json.loads(message)
+                self.logger().info(f"Pending Transactions: {self.ws_pending_txs}")
+                
                 if 'params' in message_json and 'result' in message_json['params']:
                     transaction = message_json['params']['result']
 
                     # Balancer transactions have a 'data' field
                     if 'transaction' in transaction:
                         txs_hash = transaction['transaction']['hash']
-                        self.logger().info(f"Checking for conflicting transactions {txs_hash}")
                         
-                        for txs_hash in self.ws_pending_txs:
-                            while txs_hash in self.ws_pending_txs[txs_hash]:
-                                self.ws_pending_txs[txs_hash].remove(txs_hash)
-                        
-                        self.logger().info(f"Conflict is: {conflict}")
+                        for key in ["0", "1"]:
+                            if txs_hash in self.ws_pending_txs[key]:
+                                self.ws_pending_txs[key].remove(str(txs_hash))
                     else:
                         self.logger().info("No result in message")
                 else:
                     self.logger().info("No result in message")
             except json.JSONDecodeError:
                 self.logger().info("Error decoding JSON")        
-            except websocket.exceptions.ConnectionClosed as e:
-                self.logger().info(f"WebSocket connection closed: {e}")
-        
+            
         def on_error(ws, error):
             """
             Callback for when an error occurs.
