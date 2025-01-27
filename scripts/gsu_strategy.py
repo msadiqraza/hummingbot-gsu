@@ -4,7 +4,10 @@ import time
 from decimal import ROUND_UP
 from typing import Dict
 
+import json
+import websocket
 import requests
+from threading import Thread
 from pydantic import Field
 from web3 import Web3
 
@@ -44,12 +47,16 @@ class GSUStrategyConfig(BaseClientModel):
     maximum_order_amount: Decimal = Field(1000, client_data=ClientFieldData(prompt_on_new=True, prompt=lambda mi: "Maximum order amount (in units)"))
     rpc_url: str = Field("http://localhost:8545", client_data=ClientFieldData(prompt_on_new=True, prompt=lambda mi: "Infura/Alchemy RPC URL"))
 
+    websocket_uri: str = Field("wss://eth-sepolia.g.alchemy.com/v2/<api-key>", client_data=ClientFieldData(prompt_on_new=True, prompt=lambda mi: "Alchemy WebSocket API URL"))
+    pool_id: str = Field(
+        "0x00eba51a44c235bf4f0d3575d6c99d3d4236f694000000000000000000000182", client_data=ClientFieldData(prompt_on_new=False, prompt=lambda mi: "Trading Pair Pool_id")
+    )
+
 
 class AmmPriceExample(ScriptStrategyBase):
     """
     This example shows how to call the /amm/price Gateway endpoint to fetch price for a swap
     """
-
     w3 = None
     rounding = ROUND_UP
     on_going_task = False
@@ -69,6 +76,15 @@ class AmmPriceExample(ScriptStrategyBase):
         }
     ]
 
+    # addittional
+    vault_abi = [{"inputs":[{"internalType":"contract IAuthorizer","name":"authorizer","type":"address"},{"internalType":"contract IWETH","name":"weth","type":"address"},{"internalType":"uint256","name":"pauseWindowDuration","type":"uint256"},{"internalType":"uint256","name":"bufferPeriodDuration","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"contract IAuthorizer","name":"newAuthorizer","type":"address"}],"name":"AuthorizerChanged","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"contract IERC20","name":"token","type":"address"},{"indexed":True,"internalType":"address","name":"sender","type":"address"},{"indexed":False,"internalType":"address","name":"recipient","type":"address"},{"indexed":False,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"ExternalBalanceTransfer","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"contract IFlashLoanRecipient","name":"recipient","type":"address"},{"indexed":True,"internalType":"contract IERC20","name":"token","type":"address"},{"indexed":False,"internalType":"uint256","name":"amount","type":"uint256"},{"indexed":False,"internalType":"uint256","name":"feeAmount","type":"uint256"}],"name":"FlashLoan","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"address","name":"user","type":"address"},{"indexed":True,"internalType":"contract IERC20","name":"token","type":"address"},{"indexed":False,"internalType":"int256","name":"delta","type":"int256"}],"name":"InternalBalanceChanged","type":"event"},{"anonymous":False,"inputs":[{"indexed":False,"internalType":"bool","name":"paused","type":"bool"}],"name":"PausedStateChanged","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"poolId","type":"bytes32"},{"indexed":True,"internalType":"address","name":"liquidityProvider","type":"address"},{"indexed":False,"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"indexed":False,"internalType":"int256[]","name":"deltas","type":"int256[]"},{"indexed":False,"internalType":"uint256[]","name":"protocolFeeAmounts","type":"uint256[]"}],"name":"PoolBalanceChanged","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"poolId","type":"bytes32"},{"indexed":True,"internalType":"address","name":"assetManager","type":"address"},{"indexed":True,"internalType":"contract IERC20","name":"token","type":"address"},{"indexed":False,"internalType":"int256","name":"cashDelta","type":"int256"},{"indexed":False,"internalType":"int256","name":"managedDelta","type":"int256"}],"name":"PoolBalanceManaged","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"poolId","type":"bytes32"},{"indexed":True,"internalType":"address","name":"poolAddress","type":"address"},{"indexed":False,"internalType":"enum IVault.PoolSpecialization","name":"specialization","type":"uint8"}],"name":"PoolRegistered","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"address","name":"relayer","type":"address"},{"indexed":True,"internalType":"address","name":"sender","type":"address"},{"indexed":False,"internalType":"bool","name":"approved","type":"bool"}],"name":"RelayerApprovalChanged","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"poolId","type":"bytes32"},{"indexed":True,"internalType":"contract IERC20","name":"tokenIn","type":"address"},{"indexed":True,"internalType":"contract IERC20","name":"tokenOut","type":"address"},{"indexed":False,"internalType":"uint256","name":"amountIn","type":"uint256"},{"indexed":False,"internalType":"uint256","name":"amountOut","type":"uint256"}],"name":"Swap","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"poolId","type":"bytes32"},{"indexed":False,"internalType":"contract IERC20[]","name":"tokens","type":"address[]"}],"name":"TokensDeregistered","type":"event"},{"anonymous":False,"inputs":[{"indexed":True,"internalType":"bytes32","name":"poolId","type":"bytes32"},{"indexed":False,"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"indexed":False,"internalType":"address[]","name":"assetManagers","type":"address[]"}],"name":"TokensRegistered","type":"event"},{"inputs":[],"name":"WETH","outputs":[{"internalType":"contract IWETH","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"enum IVault.SwapKind","name":"kind","type":"uint8"},{"components":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"uint256","name":"assetInIndex","type":"uint256"},{"internalType":"uint256","name":"assetOutIndex","type":"uint256"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes","name":"userData","type":"bytes"}],"internalType":"struct IVault.BatchSwapStep[]","name":"swaps","type":"tuple[]"},{"internalType":"contract IAsset[]","name":"assets","type":"address[]"},{"components":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"bool","name":"fromInternalBalance","type":"bool"},{"internalType":"address payable","name":"recipient","type":"address"},{"internalType":"bool","name":"toInternalBalance","type":"bool"}],"internalType":"struct IVault.FundManagement","name":"funds","type":"tuple"},{"internalType":"int256[]","name":"limits","type":"int256[]"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"batchSwap","outputs":[{"internalType":"int256[]","name":"assetDeltas","type":"int256[]"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"}],"name":"deregisterTokens","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"address","name":"sender","type":"address"},{"internalType":"address payable","name":"recipient","type":"address"},{"components":[{"internalType":"contract IAsset[]","name":"assets","type":"address[]"},{"internalType":"uint256[]","name":"minAmountsOut","type":"uint256[]"},{"internalType":"bytes","name":"userData","type":"bytes"},{"internalType":"bool","name":"toInternalBalance","type":"bool"}],"internalType":"struct IVault.ExitPoolRequest","name":"request","type":"tuple"}],"name":"exitPool","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"contract IFlashLoanRecipient","name":"recipient","type":"address"},{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"internalType":"uint256[]","name":"amounts","type":"uint256[]"},{"internalType":"bytes","name":"userData","type":"bytes"}],"name":"flashLoan","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"selector","type":"bytes4"}],"name":"getActionId","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getAuthorizer","outputs":[{"internalType":"contract IAuthorizer","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getDomainSeparator","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"user","type":"address"},{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"}],"name":"getInternalBalance","outputs":[{"internalType":"uint256[]","name":"balances","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"getNextNonce","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getPausedState","outputs":[{"internalType":"bool","name":"paused","type":"bool"},{"internalType":"uint256","name":"pauseWindowEndTime","type":"uint256"},{"internalType":"uint256","name":"bufferPeriodEndTime","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"}],"name":"getPool","outputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"enum IVault.PoolSpecialization","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"contract IERC20","name":"token","type":"address"}],"name":"getPoolTokenInfo","outputs":[{"internalType":"uint256","name":"cash","type":"uint256"},{"internalType":"uint256","name":"managed","type":"uint256"},{"internalType":"uint256","name":"lastChangeBlock","type":"uint256"},{"internalType":"address","name":"assetManager","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"}],"name":"getPoolTokens","outputs":[{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"internalType":"uint256[]","name":"balances","type":"uint256[]"},{"internalType":"uint256","name":"lastChangeBlock","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getProtocolFeesCollector","outputs":[{"internalType":"contract ProtocolFeesCollector","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"user","type":"address"},{"internalType":"address","name":"relayer","type":"address"}],"name":"hasApprovedRelayer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"components":[{"internalType":"contract IAsset[]","name":"assets","type":"address[]"},{"internalType":"uint256[]","name":"maxAmountsIn","type":"uint256[]"},{"internalType":"bytes","name":"userData","type":"bytes"},{"internalType":"bool","name":"fromInternalBalance","type":"bool"}],"internalType":"struct IVault.JoinPoolRequest","name":"request","type":"tuple"}],"name":"joinPool","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"components":[{"internalType":"enum IVault.PoolBalanceOpKind","name":"kind","type":"uint8"},{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"contract IERC20","name":"token","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"internalType":"struct IVault.PoolBalanceOp[]","name":"ops","type":"tuple[]"}],"name":"managePoolBalance","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"components":[{"internalType":"enum IVault.UserBalanceOpKind","name":"kind","type":"uint8"},{"internalType":"contract IAsset","name":"asset","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"address","name":"sender","type":"address"},{"internalType":"address payable","name":"recipient","type":"address"}],"internalType":"struct IVault.UserBalanceOp[]","name":"ops","type":"tuple[]"}],"name":"manageUserBalance","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"enum IVault.SwapKind","name":"kind","type":"uint8"},{"components":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"uint256","name":"assetInIndex","type":"uint256"},{"internalType":"uint256","name":"assetOutIndex","type":"uint256"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes","name":"userData","type":"bytes"}],"internalType":"struct IVault.BatchSwapStep[]","name":"swaps","type":"tuple[]"},{"internalType":"contract IAsset[]","name":"assets","type":"address[]"},{"components":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"bool","name":"fromInternalBalance","type":"bool"},{"internalType":"address payable","name":"recipient","type":"address"},{"internalType":"bool","name":"toInternalBalance","type":"bool"}],"internalType":"struct IVault.FundManagement","name":"funds","type":"tuple"}],"name":"queryBatchSwap","outputs":[{"internalType":"int256[]","name":"","type":"int256[]"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"enum IVault.PoolSpecialization","name":"specialization","type":"uint8"}],"name":"registerPool","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"internalType":"address[]","name":"assetManagers","type":"address[]"}],"name":"registerTokens","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"contract IAuthorizer","name":"newAuthorizer","type":"address"}],"name":"setAuthorizer","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"paused","type":"bool"}],"name":"setPaused","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"relayer","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setRelayerApproval","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"components":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"enum IVault.SwapKind","name":"kind","type":"uint8"},{"internalType":"contract IAsset","name":"assetIn","type":"address"},{"internalType":"contract IAsset","name":"assetOut","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes","name":"userData","type":"bytes"}],"internalType":"struct IVault.SingleSwap","name":"singleSwap","type":"tuple"},{"components":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"bool","name":"fromInternalBalance","type":"bool"},{"internalType":"address payable","name":"recipient","type":"address"},{"internalType":"bool","name":"toInternalBalance","type":"bool"}],"internalType":"struct IVault.FundManagement","name":"funds","type":"tuple"},{"internalType":"uint256","name":"limit","type":"uint256"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swap","outputs":[{"internalType":"uint256","name":"amountCalculated","type":"uint256"}],"stateMutability":"payable","type":"function"},{"stateMutability":"payable","type":"receive"}]
+    ws_pending_txs = {
+        "0":[],
+        "1":[]
+    }
+
+
+
     @classmethod
     def init_markets(cls, config: GSUStrategyConfig):
         cls.markets = {config.connector_chain_network: {config.trading_pair}}
@@ -82,10 +98,58 @@ class AmmPriceExample(ScriptStrategyBase):
         self.connector, self.chain, _network = config.connector_chain_network.split("_")
         self.external_rate_api = f"{config.external_rate_api}/{config.external_rate_api_pair}"
         self.pending_transactions = {}  # Map to store pending transactions
+        self.ws_pending_txs = {
+            "0":[],
+            "1":[]
+        }
+        self.pool_id = config.pool_id
+        self.ALCHEMY_WS_URL = config.websocket_uri
 
         self.setup_logging()
         self.init_web3()
         self.wallet_address = self.get_wallet()
+
+
+        self.subscription_pending_request = {
+            "jsonrpc": "2.0",
+            "id": 2,
+            "method": "eth_subscribe",
+                "params": [
+               "alchemy_pendingTransactions",
+                {
+                    "toAddress": [f"{self.config.balancer_vault_address}"],
+                    "hashesOnly": False
+                }
+            ]
+        }
+        self.subscription_mined_request = {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "eth_subscribe",
+                "params": [
+               "alchemy_minedTransactions",
+                {
+                    "addresses": [
+                        {
+                            "to": f"{self.config.balancer_vault_address}"
+                        }
+                    ],
+                    "includeRemoved": False,
+                    "hashesOnly": False
+                }
+            ]
+        }
+        
+        # self.start_pending_websocket()
+        ws_pending_thread = Thread(target=self.start_pending_websocket)
+        ws_mined_thread = Thread(target=self.start_mined_websocket)
+        
+        ws_pending_thread.start()
+        ws_mined_thread.start()
+        
+        # self.start_mined_websocket()
+
+        
 
     def on_tick(self):
         # only execute once
@@ -100,7 +164,7 @@ class AmmPriceExample(ScriptStrategyBase):
     def init_web3(self):
         self.w3 = Web3(Web3.HTTPProvider(self.config.rpc_url))
         self.vault_contract_address = self.w3.to_checksum_address(self.config.balancer_vault_address)
-        self.contract = self.w3.eth.contract(self.vault_contract_address, abi=self.swap_event_abi)
+        self.contract = self.w3.eth.contract(self.vault_contract_address, abi=self.vault_abi)
 
     def complete_async_task(self):
         if self.on_going_task:
@@ -117,35 +181,58 @@ class AmmPriceExample(ScriptStrategyBase):
             if len(self.pending_transactions) > 0:
                 self.logger().info(f"Wait for Pending transactions to be confirmed: {list(self.pending_transactions.keys())}")
                 self.complete_async_task()
+                return
 
             # 1st Step `Has enough gas for tx`
             has_gas = await self.has_gas_for_tx()
             if has_gas is False:
                 self.complete_async_task()
+                return
 
             # 2nd Step `check for potential profit`
             potential_profit, base_diff, quote_diff = await self.checkPotentialProfit()
             if potential_profit is False:
                 self.complete_async_task()
+                return
 
             # 3rd Step `find action to take`
             base, quote, rate_spread = self.find_action(base_diff, quote_diff)
+            kind = None
+            if base == self.base:
+                kind = "0"
+            elif base == self.quote:
+                kind = "1"
+
+            conflict = self.is_conflict(kind)
+            if conflict:
+                self.logger().info(f"Conflict detected for {base} to {quote}. Skipping.")
+                self.complete_async_task()
+                return
 
             # 4th Step `calculate amount to sell`
             amount, price = await self.calculate_sell_amount(base, quote, rate_spread)
             if amount == 0:
                 self.complete_async_task()
+                return
 
             # 5th Step `validate token balance`
             has_balance = await self.has_balance(base, amount)
             if has_balance is False:
                 self.complete_async_task()
+                return
 
             # 6th Step `check for pending txs`
             pending_txs = await self.get_pending_txs()
             if pending_txs is True:
                 self.logger().error("Handle pending txs")
                 self.complete_async_task()
+                return
+
+            conflict = self.is_conflict(kind)
+            if conflict:
+                self.logger().info(f"Conflict detected for {base} to {quote}. Skipping.")
+                self.complete_async_task()
+                return
 
             # 7th Step `execute trade`
             trade_data = await self.execute_aam_trade(base, quote, amount, price, TradeType.SELL)
@@ -165,8 +252,8 @@ class AmmPriceExample(ScriptStrategyBase):
 
     def get_wallet(self):
         gateway_connections_conf = GatewayConnectionSetting.load()
-        if len(gateway_connections_conf) > 1:
-            self.notify("No existing wallet.\n")
+        if len(gateway_connections_conf) < 1:
+            self.logger().debug("No existing wallet.\n")
             return None
 
         wallet = [w for w in gateway_connections_conf if w["chain"] == self.chain and w["connector"] == self.connector]
@@ -236,7 +323,9 @@ class AmmPriceExample(ScriptStrategyBase):
             self.logger().info(
                 f"Minimum order amount {minimum_order_amount} is higher than maximum order amount {self.config.maximum_order_amount}. Skipping."
             )
-            return Decimal(0), Decimal(0)
+            # return Decimal(0), Decimal(0)
+            return Decimal(100), Decimal(1)
+            
 
         self.logger().info(f"Minimum order amount {minimum_order_amount}")
 
@@ -355,7 +444,7 @@ class AmmPriceExample(ScriptStrategyBase):
             limit_price = Decimal(price * (1 - self.config.slippage_buffer))
 
         trade_data = await GatewayHttpClient.get_instance().amm_trade(
-            self.chain, self.network, self.connector, self.wallet_address, base, quote, side, amount, limit_price
+            self.chain, self.network, self.connector, self.wallet_address, base, quote, side, amount, limit_price, pool_id=self.pool_id
         )
         self.logger().info(
             f"""
@@ -504,13 +593,192 @@ class AmmPriceExample(ScriptStrategyBase):
         except (ValueError, TypeError, ZeroDivisionError) as e:
             self.logger().error(f"Error processing GSU rate data: {str(e)}")
             return None
+        
+
+  # ---------------------------- Mempool ---------------------------- 
+  
+    def decode_input(self, input_data: str, ws_tx_hash:str):
+        decoded_input = self.contract.decode_function_input(input_data)
+        method = decoded_input[0].signature
+        method_name = method.split('(')[0]
+        pool_id = None
+        kind = None
+
+        if 'swap' not in method_name:
+            return False
+
+        if 'batchSwap' in function_signature:
+            # Extract the swaps array from decoded input
+            swaps = decoded_input[1]['swaps']
+            
+            # Iterate through all poolIds in the swaps array
+            for index, swap in enumerate(swaps):
+                pool_id = Web3.to_hex(swap['poolId'])
+                self.logger().info(f"Pool ID {index + 1}: {pool_id}")
+                
+            kind = decoded_input[1]['kind']
+
+        else:
+            pool_id = Web3.to_hex(decoded_input[1]['singleSwap']['poolId'])
+            kind = decoded_input[1]['singleSwap']['kind']
+
+        self.logger().info('Method:', method)
+        self.logger().info('PoolId:', pool_id)
+        self.logger().info('Kind:', kind)
+
+        if pool_id == self.pool_id: # 0 is the kind for swap
+            if kind == 0:
+                self.logger().info("Swap kind is 0. Assigning to ws_pending_txs[0]")
+                self.ws_pending_txs[0].append(ws_tx_hash)
+                return True 
+            elif kind == 1:
+                self.logger().info("Swap kind is 1. Assigning to ws_pending_txs[1]")
+                self.ws_pending_txs[1].append(ws_tx_hash)
+                return True
+            else:
+                self.logger().info("Swap kind not recognized")
+                return False
+        return False
+
+    def start_pending_websocket(self):
+        """
+        Starts the WebSocket connection.
+        """
+        def on_message(ws, message):
+            """
+            Callback for when a message is received from the WebSocket.
+            """
+            
+            self.logger().info(f"Checking for conflicting transactions {message}")
+            try:
+                message_json = json.loads(message)
+                if 'params' in message_json and 'result' in message_json['params']:
+                    transaction = message_json['params']['result']
+
+                    # Balancer transactions have a 'data' field
+                    if 'input' in transaction:
+                        conflict = decode_input( transaction['input'], transaction['hash'])
+                        self.logger().info(f"Conflict is: {conflict}")
+                    else:
+                        self.logger().info("No result in message")
+                else:
+                    self.logger().info("No result in message")
+            except json.JSONDecodeError:
+                self.logger().info("Error decoding JSON")      
+            except websocket.exceptions.ConnectionClosed as e:
+                self.logger().info(f"WebSocket connection closed: {e}")
+        
+        def on_error(ws, error):
+            """
+            Callback for when an error occurs.
+            """
+            
+            self.logger().info(f"Error: {error}")
+        
+        def on_close(ws, close_status_code, close_msg):
+            """
+            Callback for when the WebSocket connection is closed.
+            """
+            
+            self.logger().info("WebSocket connection closed")
+        
+        def on_open(ws):
+            """
+            Callback for when the WebSocket connection is opened.
+            """
+            self.logger().info("WebSocket connection established")
+            # Subscribe to pending transactions
+            
+            ws.send(json.dumps(self.subscription_pending_request))
+        
+        ws = websocket.WebSocketApp(
+            self.ALCHEMY_WS_URL,
+            on_message=on_message,
+            on_error=on_error,
+            on_close=on_close,
+        )
+        ws.on_open = on_open
+        ws.run_forever()
+
+
+    def start_mined_websocket(self):
+        """
+        Starts the WebSocket connection.
+        """
+        def on_message(ws, message):
+            """
+            Callback for when a message is received from the WebSocket.
+            """
+            
+            self.logger().info(f"Checking for mined transactions: {message}")
+            try:
+                message_json = json.loads(message)
+                if 'params' in message_json and 'result' in message_json['params']:
+                    transaction = message_json['params']['result']
+
+                    # Balancer transactions have a 'data' field
+                    if 'transaction' in transaction:
+                        txs_hash = transaction['transaction']['hash']
+                        self.logger().info(f"Checking for conflicting transactions {txs_hash}")
+                        
+                        for txs_hash in self.ws_pending_txs:
+                            while txs_hash in self.ws_pending_txs[txs_hash]:
+                                self.ws_pending_txs[txs_hash].remove(txs_hash)
+                        
+                        self.logger().info(f"Conflict is: {conflict}")
+                    else:
+                        self.logger().info("No result in message")
+                else:
+                    self.logger().info("No result in message")
+            except json.JSONDecodeError:
+                self.logger().info("Error decoding JSON")        
+            except websocket.exceptions.ConnectionClosed as e:
+                self.logger().info(f"WebSocket connection closed: {e}")
+        
+        def on_error(ws, error):
+            """
+            Callback for when an error occurs.
+            """
+            
+            self.logger().info(f"Error: {error}")
+        
+        def on_close(ws, close_status_code, close_msg):
+            """
+            Callback for when the WebSocket connection is closed.
+            """
+            
+            self.logger().info("WebSocket connection closed")
+        
+        def on_open(ws):
+            """
+            Callback for when the WebSocket connection is opened.
+            """
+            self.logger().info("WebSocket connection established")
+            # Subscribe to pending transactions
+            
+            ws.send(json.dumps(self.subscription_mined_request))
+        
+        ws = websocket.WebSocketApp(
+            self.ALCHEMY_WS_URL,
+            on_message=on_message,
+            on_error=on_error,
+            on_close=on_close,
+        )
+        ws.on_open = on_open
+        ws.run_forever()
+
+    def get_ws_pending_txs(self):
+        return self.ws_pending_txs
+
+    def is_conflict(self, kind: str) -> bool:
+        return not not self.ws_pending_txs[kind]
 
     # ---------------------------- Utils ----------------------------
 
     def eth_to_usd(self, amount: Decimal) -> Decimal:
-        usd_conversion_rate = RateOracle.get_instance().get_pair_rate("ETH-USD")
-        self.logger().info(f"RateOracle ETH to USD conversion rate: {usd_conversion_rate}")
-        return (amount * usd_conversion_rate).quantize(self.decimals_format, rounding=self.rounding)
+        usdt_conversion_rate = RateOracle.get_instance().get_pair_rate("ETH-USDT")
+        self.logger().info(f"RateOracle ETH to USD conversion rate: {usdt_conversion_rate}")
+        return (amount * usdt_conversion_rate).quantize(self.decimals_format, rounding=self.rounding)
 
     def usdt_to_usd(self, amount: Decimal) -> Decimal:
         usd_conversion_rate = RateOracle.get_instance().get_pair_rate("USDT-USD")
