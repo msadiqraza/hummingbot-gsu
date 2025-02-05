@@ -1,0 +1,253 @@
+2025-01-29 07:50:34 | error | 	unhandledRejection: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[],\"id\":94,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+Error: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[],\"id\":94,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) | Error: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[],\"id\":94,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-29 07:53:14 | info | 	3 request(s) sent in last 300 seconds. | undefined
+2025-01-29 07:58:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:03:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:08:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:13:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:18:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:23:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:28:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:33:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:38:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:43:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:48:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:53:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 08:58:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 09:03:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 09:08:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 09:13:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 09:18:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-29 09:23:14 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-01-30 12:04:59 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-30 12:04:59 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-30 12:04:59 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-30 12:04:59 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-30 12:05:06 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:06 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-30 12:05:10 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:10 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:10 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:05:11 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:05:11 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:11 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:12 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:05:12 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:05:15 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:15 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:16 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:05:16 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:05:18 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:05:18 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:05:18 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:05:18 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:05:28 | error | 	request aborted | BadRequestError: request aborted
+    at IncomingMessage.onAborted (/home/gateway/node_modules/express/node_modules/raw-body/index.js:238:10)
+    at IncomingMessage.emit (node:events:513:28)
+    at IncomingMessage._destroy (node:_http_incoming:224:10)
+    at _destroy (node:internal/streams/destroy:109:10)
+    at IncomingMessage.destroy (node:internal/streams/destroy:71:5)
+    at abortIncoming (node:_http_server:717:9)
+    at socketOnClose (node:_http_server:711:3)
+    at TLSSocket.emit (node:events:525:35)
+    at node:net:313:12
+    at Socket.done (node:_tls_wrap:587:7)
+2025-01-30 12:05:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:32 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:05:32 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:05:33 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:05:33 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:05:33 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:05:33 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:05:41 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:41 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:42 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:05:42 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:05:44 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:44 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:05:45 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:05:45 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:05:46 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:05:46 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:05:46 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:05:46 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:06:01 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:06:01 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:06:01 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:06:02 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:06:02 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:06:02 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:06:02 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:06:02 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:10:06 | info | 	30 request(s) sent in last 300 seconds. | undefined
+2025-01-30 12:14:32 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-30 12:14:32 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-30 12:14:32 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-30 12:14:32 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-30 12:14:56 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:14:56 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-30 12:15:01 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:01 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:01 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:15:01 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:15:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:02 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:15:02 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:15:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:06 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:15:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:15:07 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:15:07 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:15:07 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:15:07 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:15:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:32 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:15:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:15:32 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:15:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:15:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:15:33 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:15:33 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:15:33 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:15:33 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:16:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:16:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:16:02 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:16:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:16:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:16:03 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:16:03 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:16:03 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:16:03 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:16:03 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:16:03 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:16:03 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:19:56 | info | 	30 request(s) sent in last 300 seconds. | undefined
+2025-01-30 12:24:56 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-01-30 12:29:56 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-01-30 12:32:18 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-30 12:32:18 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-30 12:32:18 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-30 12:32:18 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-30 12:32:29 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:29 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-30 12:32:32 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:32 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:33 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:32:33 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:32:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:35 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:32:35 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:32:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:32:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:32:42 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:32:42 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:32:42 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:32:42 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:32:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:32:56 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:32:56 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:32:57 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:32:57 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:32:57 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:32:57 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:33:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:33:05 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:33:13 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:13 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:14 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:33:14 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:33:15 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:33:15 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:33:15 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:33:15 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:33:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:32 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:33:32 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:33:33 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:33:33 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:33:33 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:33:33 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:33:45 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-30 12:33:45 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-30 12:33:45 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-30 12:33:45 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-30 12:33:55 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:55 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-30 12:33:58 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:58 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:58 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:33:59 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:33:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:33:59 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:34:00 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:34:04 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:34:04 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:34:04 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:34:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:34:05 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:34:05 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:34:05 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:34:05 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:36:11 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-30 12:36:11 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-30 12:36:11 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-30 12:36:11 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-30 12:47:26 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-30 12:47:26 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-30 12:47:26 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-30 12:47:26 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-30 12:47:37 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:47:37 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-30 12:47:54 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:47:54 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:47:55 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:47:55 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:47:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:47:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:47:56 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:47:56 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:47:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:47:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:48:00 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:48:00 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:48:01 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-30 12:48:01 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-30 12:48:01 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-30 12:48:01 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-30 12:48:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:48:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:48:47 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3075900 | undefined
+2025-01-30 12:48:47 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 48932755731 | undefined
+2025-01-30 12:48:49 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:48:49 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-30 12:48:49 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:48:49 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-30 12:52:35 | info | 	24 request(s) sent in last 300 seconds. | undefined

@@ -1,0 +1,1395 @@
+2025-01-31 07:30:08 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-31 07:30:08 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-31 07:30:08 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-31 07:30:08 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-31 07:30:14 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:14 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-31 07:30:20 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:20 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:21 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:30:21 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:30:21 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:21 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:26 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:30:27 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:30:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:30:57 | error | 	missing response (requestBody="{\"method\":\"eth_getBalance\",\"params\":[\"0x1caf820bcb6cefc9decad36f11faf4024a9bcf0b\",\"latest\"],\"id\":56,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3008,"code":"ENOTFOUND","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1) | Error: missing response (requestBody="{\"method\":\"eth_getBalance\",\"params\":[\"0x1caf820bcb6cefc9decad36f11faf4024a9bcf0b\",\"latest\"],\"id\":56,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3008,"code":"ENOTFOUND","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 07:31:09 | error | 	missing revert data in call exception; Transaction reverted without a reason string [ See: https://links.ethers.org/v5-errors-CALL_EXCEPTION ] (data="0x", transaction={"to":"0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2","data":"0x70a082310000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b","accessList":null}, error={"reason":"missing response","code":"SERVER_ERROR","requestBody":"{\"method\":\"eth_call\",\"params\":[{\"to\":\"0x9d6664ad3bbef76a2a0df759dadbf29d8c8d54e2\",\"data\":\"0x70a082310000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b\"},\"latest\"],\"id\":55,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","serverError":{"code":"ECONNRESET"},"url":"https://rpc.ankr.com/eth_sepolia"}, code=CALL_EXCEPTION, version=providers/5.7.2) | Error: missing revert data in call exception; Transaction reverted without a reason string [ See: https://links.ethers.org/v5-errors-CALL_EXCEPTION ] (data="0x", transaction={"to":"0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2","data":"0x70a082310000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b","accessList":null}, error={"reason":"missing response","code":"SERVER_ERROR","requestBody":"{\"method\":\"eth_call\",\"params\":[{\"to\":\"0x9d6664ad3bbef76a2a0df759dadbf29d8c8d54e2\",\"data\":\"0x70a082310000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b\"},\"latest\"],\"id\":55,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","serverError":{"code":"ECONNRESET"},"url":"https://rpc.ankr.com/eth_sepolia"}, code=CALL_EXCEPTION, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at checkError (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:108:16)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:751:47)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 07:31:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:13 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:31:13 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:31:15 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:31:15 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:31:15 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:31:15 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:31:23 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:23 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:24 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:31:25 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:31:28 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:28 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:29 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:31:29 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:31:30 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:31:30 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:31:30 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:31:30 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:31:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:31:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:31:41 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:31:41 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:31:41 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:31:41 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:31:50 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:50 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:51 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:31:51 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:31:51 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:31:51 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:31:52 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:31:52 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:31:52 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:52 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:31:53 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:31:53 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:01 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:01 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:02 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:02 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:03 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:32:03 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:32:03 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:32:03 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:32:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:13 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:13 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:13 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:32:13 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:32:13 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:32:13 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:32:24 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:24 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:25 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:32:25 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:32:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:26 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:26 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:26 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:26 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:27 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:32:27 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:32:27 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:32:27 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:32:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:39 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:39 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:40 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:32:40 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:32:40 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:32:40 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:32:50 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:50 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:50 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:50 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:52 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 07:32:52 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:32:53 | info | 	Expected execution price is 1.035041, limit price is undefined. | undefined
+2025-01-31 07:32:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:32:55 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3386715 | undefined
+2025-01-31 07:32:55 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 45932755731 | undefined
+2025-01-31 07:32:57 | info | 	Transaction Details: "0x5d9edd5c9a84e9f558b62cdb593286cff6093eb21e254ed0f4244d22916f0209" | undefined
+2025-01-31 07:32:57 | info | 	Trade has been executed, txHash is 0x5d9edd5c9a84e9f558b62cdb593286cff6093eb21e254ed0f4244d22916f0209, nonce is 243, gasPrice is 2.608855736. | undefined
+2025-01-31 07:33:03 | info | 	Poll sepolia, txHash 0x5d9edd5c9a84e9f558b62cdb593286cff6093eb21e254ed0f4244d22916f0209, status 1. | undefined
+2025-01-31 07:33:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:33:07 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:33:08 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:33:08 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:33:08 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:33:08 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:33:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:19 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:33:19 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:33:20 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 07:33:20 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:33:22 | info | 	Expected execution price is 1.035041, limit price is undefined. | undefined
+2025-01-31 07:33:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:32 | error | 	missing response (requestBody="{\"method\":\"eth_getBlockByNumber\",\"params\":[\"latest\",false],\"id\":114,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"code":"ECONNRESET"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1) | undefined
+2025-01-31 07:33:32 | error | 	missing response (requestBody="{\"method\":\"eth_getBlockByNumber\",\"params\":[\"latest\",false],\"id\":114,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"code":"ECONNRESET"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1) | Error: missing response (requestBody="{\"method\":\"eth_getBlockByNumber\",\"params\":[\"latest\",false],\"id\":114,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"code":"ECONNRESET"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 07:33:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:33:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:33:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:35 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:33:35 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:33:36 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:33:36 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:33:36 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:33:36 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:33:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:47 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:33:47 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:33:48 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:33:48 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:33:48 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:33:48 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:33:57 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:57 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:58 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:33:58 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:33:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:33:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:34:00 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:34:00 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:34:01 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 07:34:01 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:34:07 | info | 	Expected execution price is 1.035041, limit price is undefined. | undefined
+2025-01-31 07:34:09 | info | 	Transaction Details: "0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c" | undefined
+2025-01-31 07:34:09 | info | 	Trade has been executed, txHash is 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, nonce is 245, gasPrice is 3.2681097. | undefined
+2025-01-31 07:34:16 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:34:27 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:34:33 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:34:40 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:34:47 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:34:58 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:35:14 | info | 	118 request(s) sent in last 300 seconds. | undefined
+2025-01-31 07:35:15 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:35:31 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:35:44 | error | 	missing response (requestBody="{\"method\":\"eth_blockNumber\",\"params\":[],\"id\":167,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1) | Error: missing response (requestBody="{\"method\":\"eth_blockNumber\",\"params\":[],\"id\":167,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 07:35:50 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:35:57 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:03 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:09 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:16 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:22 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:28 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:34 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:40 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:47 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:36:58 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:04 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:11 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:17 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:23 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:45 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:52 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:37:58 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:20 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:26 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:33 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:39 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:45 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:51 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:38:57 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:03 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:09 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:15 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:21 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:27 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:33 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:39 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:45 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:51 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:39:57 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:03 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:08 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:14 | info | 	140 request(s) sent in last 300 seconds. | undefined
+2025-01-31 07:40:14 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:20 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:27 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:33 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:39 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:45 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:51 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:40:57 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:03 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:09 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:15 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:21 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:27 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:33 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:39 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:45 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:51 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:41:57 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:03 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:09 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:15 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:22 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:28 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:34 | info | 	Poll sepolia, txHash 0xbfe3821ea564022b9acdd5da291e2bd5309a77190b202d614ce522e01e9a7f3c, status 0. | undefined
+2025-01-31 07:42:49 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-31 07:42:49 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-31 07:42:49 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-31 07:42:49 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-31 07:43:14 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:14 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-31 07:43:18 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:18 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:18 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:43:18 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:43:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:19 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:43:20 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:43:23 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:23 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:24 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:43:24 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:43:25 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:43:25 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:43:25 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:43:25 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:43:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:43:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:43:41 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 07:43:41 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:43:43 | info | 	Expected execution price is 1.034407, limit price is undefined. | undefined
+2025-01-31 07:43:47 | info | 	Transaction Details: "0x871927b9f6c9b4c23f4ddf1a8b1fcd43bfc45f6f8187ff6408d75d35be39f40a" | undefined
+2025-01-31 07:43:47 | info | 	Trade has been executed, txHash is 0x871927b9f6c9b4c23f4ddf1a8b1fcd43bfc45f6f8187ff6408d75d35be39f40a, nonce is 244, gasPrice is 2.844358639. | undefined
+2025-01-31 07:43:48 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:48 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:43:49 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3490187 | undefined
+2025-01-31 07:43:49 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 44932755731 | undefined
+2025-01-31 07:43:55 | info | 	Poll sepolia, txHash 0x871927b9f6c9b4c23f4ddf1a8b1fcd43bfc45f6f8187ff6408d75d35be39f40a, status 0. | undefined
+2025-01-31 07:44:01 | info | 	Poll sepolia, txHash 0x871927b9f6c9b4c23f4ddf1a8b1fcd43bfc45f6f8187ff6408d75d35be39f40a, status 0. | undefined
+2025-01-31 07:44:07 | info | 	Poll sepolia, txHash 0x871927b9f6c9b4c23f4ddf1a8b1fcd43bfc45f6f8187ff6408d75d35be39f40a, status 1. | undefined
+2025-01-31 07:44:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:44:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:44:10 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:44:10 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:44:11 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:44:11 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:44:11 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:44:11 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:44:20 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:44:20 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:44:20 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:44:21 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:44:24 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:44:24 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:44:24 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:44:24 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:44:26 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 07:44:26 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:44:27 | info | 	Expected execution price is 1.034407, limit price is undefined. | undefined
+2025-01-31 07:44:29 | error | 	nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"id\":90,\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: nonce too low\"}}","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9023683aa36a781f58459682f0085019e483cc0832dc6c094ba12222222228d8ba445958a75a0704d566bf2c880b901c452bbbe2900000000000000000000000000000000000000000000000000000000000000e00000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000193da00000000000000000000000000000000000000000000000000000000679c6ef300eba51a44c235bf4f0d3575d6c99d3d4236f69400000000000000000000018200000000000000000000000000000000000000000000000000000000000000000000000000000000000000009d6664ad3bbef76a2a0df759dadbf29d8c8d54e20000000000000000000000006da08364fbeee5a2ee8e596f3db6170b147cad20000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000c080a0ced167d3364088b2ce7805525541748cf97a7a75e23b1a16f0e9d0593e94f61da03b83f3fa0ee3134205912d259f2347ff574aee525b50fc39750a337e9eeba34d\"],\"id\":90,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"https://rpc.ankr.com/eth_sepolia"}, method="sendTransaction", transaction="0x02f9023683aa36a781f58459682f0085019e483cc0832dc6c094ba12222222228d8ba445958a75a0704d566bf2c880b901c452bbbe2900000000000000000000000000000000000000000000000000000000000000e00000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000193da00000000000000000000000000000000000000000000000000000000679c6ef300eba51a44c235bf4f0d3575d6c99d3d4236f69400000000000000000000018200000000000000000000000000000000000000000000000000000000000000000000000000000000000000009d6664ad3bbef76a2a0df759dadbf29d8c8d54e20000000000000000000000006da08364fbeee5a2ee8e596f3db6170b147cad20000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000c080a0ced167d3364088b2ce7805525541748cf97a7a75e23b1a16f0e9d0593e94f61da03b83f3fa0ee3134205912d259f2347ff574aee525b50fc39750a337e9eeba34d", code=NONCE_EXPIRED, version=providers/5.7.2) | undefined
+2025-01-31 07:44:29 | error | 	nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"id\":90,\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: nonce too low\"}}","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9023683aa36a781f58459682f0085019e483cc0832dc6c094ba12222222228d8ba445958a75a0704d566bf2c880b901c452bbbe2900000000000000000000000000000000000000000000000000000000000000e00000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000193da00000000000000000000000000000000000000000000000000000000679c6ef300eba51a44c235bf4f0d3575d6c99d3d4236f69400000000000000000000018200000000000000000000000000000000000000000000000000000000000000000000000000000000000000009d6664ad3bbef76a2a0df759dadbf29d8c8d54e20000000000000000000000006da08364fbeee5a2ee8e596f3db6170b147cad20000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000c080a0ced167d3364088b2ce7805525541748cf97a7a75e23b1a16f0e9d0593e94f61da03b83f3fa0ee3134205912d259f2347ff574aee525b50fc39750a337e9eeba34d\"],\"id\":90,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"https://rpc.ankr.com/eth_sepolia"}, method="sendTransaction", transaction="0x02f9023683aa36a781f58459682f0085019e483cc0832dc6c094ba12222222228d8ba445958a75a0704d566bf2c880b901c452bbbe2900000000000000000000000000000000000000000000000000000000000000e00000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000193da00000000000000000000000000000000000000000000000000000000679c6ef300eba51a44c235bf4f0d3575d6c99d3d4236f69400000000000000000000018200000000000000000000000000000000000000000000000000000000000000000000000000000000000000009d6664ad3bbef76a2a0df759dadbf29d8c8d54e20000000000000000000000006da08364fbeee5a2ee8e596f3db6170b147cad20000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000c080a0ced167d3364088b2ce7805525541748cf97a7a75e23b1a16f0e9d0593e94f61da03b83f3fa0ee3134205912d259f2347ff574aee525b50fc39750a337e9eeba34d", code=NONCE_EXPIRED, version=providers/5.7.2) | Error: nonce has already been used [ See: https://links.ethers.org/v5-errors-NONCE_EXPIRED ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"id\":90,\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: nonce too low\"}}","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9023683aa36a781f58459682f0085019e483cc0832dc6c094ba12222222228d8ba445958a75a0704d566bf2c880b901c452bbbe2900000000000000000000000000000000000000000000000000000000000000e00000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000193da00000000000000000000000000000000000000000000000000000000679c6ef300eba51a44c235bf4f0d3575d6c99d3d4236f69400000000000000000000018200000000000000000000000000000000000000000000000000000000000000000000000000000000000000009d6664ad3bbef76a2a0df759dadbf29d8c8d54e20000000000000000000000006da08364fbeee5a2ee8e596f3db6170b147cad20000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000c080a0ced167d3364088b2ce7805525541748cf97a7a75e23b1a16f0e9d0593e94f61da03b83f3fa0ee3134205912d259f2347ff574aee525b50fc39750a337e9eeba34d\"],\"id\":90,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"https://rpc.ankr.com/eth_sepolia"}, method="sendTransaction", transaction="0x02f9023683aa36a781f58459682f0085019e483cc0832dc6c094ba12222222228d8ba445958a75a0704d566bf2c880b901c452bbbe2900000000000000000000000000000000000000000000000000000000000000e00000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001caf820bcb6cefc9decad36f11faf4024a9bcf0b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000193da00000000000000000000000000000000000000000000000000000000679c6ef300eba51a44c235bf4f0d3575d6c99d3d4236f69400000000000000000000018200000000000000000000000000000000000000000000000000000000000000000000000000000000000000009d6664ad3bbef76a2a0df759dadbf29d8c8d54e20000000000000000000000006da08364fbeee5a2ee8e596f3db6170b147cad20000000000000000000000000000000000000000000000000000000003b9aca0000000000000000000000000000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000000000000000000000c080a0ced167d3364088b2ce7805525541748cf97a7a75e23b1a16f0e9d0593e94f61da03b83f3fa0ee3134205912d259f2347ff574aee525b50fc39750a337e9eeba34d", code=NONCE_EXPIRED, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at checkError (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:152:16)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:751:47)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 07:48:13 | info | 	52 request(s) sent in last 300 seconds. | undefined
+2025-01-31 07:57:04 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-31 07:57:04 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-31 07:57:04 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-31 07:57:04 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-31 07:57:22 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:22 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-31 07:57:25 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:25 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:26 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:57:26 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 07:57:26 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:26 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:27 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:57:27 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:57:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:31 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:57:31 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:57:32 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:57:32 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:57:32 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:57:32 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:57:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:44 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:57:44 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:57:45 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:57:45 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:57:45 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:57:45 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:57:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:55 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:57:55 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:57:56 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:56 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:57:56 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 07:57:56 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 07:57:56 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 07:57:56 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:57:56 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:57:56 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:58:07 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:58:07 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 07:58:07 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 07:58:07 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 07:58:09 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 07:58:09 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 07:58:11 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 07:58:25 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-31 07:58:26 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-31 07:58:26 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-31 07:58:26 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-31 08:00:12 | info | 	Gateway Version: 2.2.0 | undefined
+2025-01-31 08:00:12 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-01-31 08:00:12 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-01-31 08:00:12 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-01-31 08:00:16 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:00:16 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-01-31 08:00:17 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:00:17 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:00:24 | error | 	could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2) | Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 08:00:24 | error | 	unhandledRejection: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) | Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 08:00:24 | error | 	could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2) | Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 08:00:24 | error | 	could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2) | Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 08:00:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:00:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:00:25 | error | 	could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2) | Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at StaticJsonRpcProvider.<anonymous> (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/gateway/node_modules/ethers/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 08:02:46 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:02:46 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:02:58 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:02:58 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:03:00 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:00 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:01 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 08:03:01 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 08:03:04 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:04 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:05 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 08:03:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 08:03:06 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:03:06 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:03:06 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:03:06 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:03:30 | error | 	missing response (requestBody="{\"method\":\"eth_getBalance\",\"params\":[\"0x1caf820bcb6cefc9decad36f11faf4024a9bcf0b\",\"latest\"],\"id\":66,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"code":"ECONNRESET"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1) | Error: missing response (requestBody="{\"method\":\"eth_getBalance\",\"params\":[\"0x1caf820bcb6cefc9decad36f11faf4024a9bcf0b\",\"latest\"],\"id\":66,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"code":"ECONNRESET"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-01-31 08:03:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:31 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:32 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 08:03:32 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 08:03:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 08:03:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 08:03:34 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:03:34 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:03:34 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:03:34 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:03:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:03:46 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 08:03:46 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3593594 | undefined
+2025-01-31 08:03:49 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:03:49 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:03:51 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:03:57 | info | 	Transaction Details: "0xdba2a66f0fa6ff1bc68b0d855a254e962c2165a20d30944d526ba443aca072d0" | undefined
+2025-01-31 08:03:57 | info | 	Trade has been executed, txHash is 0xdba2a66f0fa6ff1bc68b0d855a254e962c2165a20d30944d526ba443aca072d0, nonce is 246, gasPrice is 33. | undefined
+2025-01-31 08:04:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:02 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:02 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 43932755731 | undefined
+2025-01-31 08:04:03 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:04:05 | info | 	Poll sepolia, txHash 0xdba2a66f0fa6ff1bc68b0d855a254e962c2165a20d30944d526ba443aca072d0, status 1. | undefined
+2025-01-31 08:04:08 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:08 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:09 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:04:09 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:04:10 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:04:10 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:04:10 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:04:10 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:04:22 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:22 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:23 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:04:23 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:04:24 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:04:24 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:04:26 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:04:28 | info | 	Transaction Details: "0x7795bf3ccb1e38d466537cca8ad9d084561a3e950503dbb68f7e3b03dc424cca" | undefined
+2025-01-31 08:04:28 | info | 	Trade has been executed, txHash is 0x7795bf3ccb1e38d466537cca8ad9d084561a3e950503dbb68f7e3b03dc424cca, nonce is 247, gasPrice is 33. | undefined
+2025-01-31 08:04:36 | info | 	Poll sepolia, txHash 0x7795bf3ccb1e38d466537cca8ad9d084561a3e950503dbb68f7e3b03dc424cca, status 0. | undefined
+2025-01-31 08:04:44 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:44 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:44 | info | 	Poll sepolia, txHash 0x7795bf3ccb1e38d466537cca8ad9d084561a3e950503dbb68f7e3b03dc424cca, status 0. | undefined
+2025-01-31 08:04:44 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:04:44 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:04:50 | info | 	Poll sepolia, txHash 0x7795bf3ccb1e38d466537cca8ad9d084561a3e950503dbb68f7e3b03dc424cca, status 1. | undefined
+2025-01-31 08:04:52 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:52 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:04:53 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:04:53 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:04:54 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:04:54 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:04:54 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:04:54 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:05:02 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:02 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:03 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:05:03 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:05:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:05:05 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:05:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:06 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:05:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:05:07 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:05:07 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:05:09 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:05:10 | info | 	Transaction Details: "0x22cdf36c0c5ed9d581f3e5eb95c2730d3ff6ff6d2e7eadd303eb6e2877ade4d9" | undefined
+2025-01-31 08:05:10 | info | 	Trade has been executed, txHash is 0x22cdf36c0c5ed9d581f3e5eb95c2730d3ff6ff6d2e7eadd303eb6e2877ade4d9, nonce is 248, gasPrice is 33. | undefined
+2025-01-31 08:05:16 | info | 	84 request(s) sent in last 300 seconds. | undefined
+2025-01-31 08:05:17 | info | 	Poll sepolia, txHash 0x22cdf36c0c5ed9d581f3e5eb95c2730d3ff6ff6d2e7eadd303eb6e2877ade4d9, status 1. | undefined
+2025-01-31 08:05:20 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:20 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:20 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:05:20 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:05:21 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:05:21 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:05:21 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:05:21 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:05:36 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:36 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:37 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:05:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:37 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:05:37 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:05:38 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:05:39 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:05:39 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:05:43 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:05:45 | info | 	Transaction Details: "0x45602fd43a3189e7b222b8489a5949e51128dae77fd3847e99ec1d37e67be6f0" | undefined
+2025-01-31 08:05:45 | info | 	Trade has been executed, txHash is 0x45602fd43a3189e7b222b8489a5949e51128dae77fd3847e99ec1d37e67be6f0, nonce is 249, gasPrice is 33. | undefined
+2025-01-31 08:05:52 | info | 	Poll sepolia, txHash 0x45602fd43a3189e7b222b8489a5949e51128dae77fd3847e99ec1d37e67be6f0, status 1. | undefined
+2025-01-31 08:05:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:05:55 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:05:55 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:05:56 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:05:56 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:05:56 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:05:56 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:06:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:07 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:06:07 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:06:08 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:08 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:09 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:06:24 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:06:25 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:06:25 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:06:27 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:06:29 | info | 	Transaction Details: "0x564eb1fb86fb90206e1ff67ec0089459f8a351d0553dd35f98d2e82b4da429ca" | undefined
+2025-01-31 08:06:29 | info | 	Trade has been executed, txHash is 0x564eb1fb86fb90206e1ff67ec0089459f8a351d0553dd35f98d2e82b4da429ca, nonce is 250, gasPrice is 33. | undefined
+2025-01-31 08:06:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:37 | info | 	Poll sepolia, txHash 0x564eb1fb86fb90206e1ff67ec0089459f8a351d0553dd35f98d2e82b4da429ca, status 1. | undefined
+2025-01-31 08:06:38 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:06:38 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:06:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:06:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:06:41 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:06:41 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:06:41 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:06:41 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:06:53 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:53 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:06:53 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:06:53 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:06:55 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:06:55 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:06:57 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:06:58 | info | 	Transaction Details: "0x5d90df398873668bd778d9aa41681ca51bcf99ce01cdbc9f22166e08cd284ae5" | undefined
+2025-01-31 08:06:58 | info | 	Trade has been executed, txHash is 0x5d90df398873668bd778d9aa41681ca51bcf99ce01cdbc9f22166e08cd284ae5, nonce is 251, gasPrice is 33. | undefined
+2025-01-31 08:07:04 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:04 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:05 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:07:05 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:07:06 | info | 	Poll sepolia, txHash 0x5d90df398873668bd778d9aa41681ca51bcf99ce01cdbc9f22166e08cd284ae5, status 1. | undefined
+2025-01-31 08:07:08 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:08 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:08 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:07:08 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:07:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:09 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:07:09 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:07:10 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:07:10 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:07:10 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:07:10 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:07:23 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:23 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:23 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:07:23 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:07:24 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:07:24 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:07:26 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:07:28 | info | 	Transaction Details: "0x9fc93d68b871ddacfeb5cfbeb1586bf572bff32484f29249fa208eef21b51467" | undefined
+2025-01-31 08:07:28 | info | 	Trade has been executed, txHash is 0x9fc93d68b871ddacfeb5cfbeb1586bf572bff32484f29249fa208eef21b51467, nonce is 252, gasPrice is 33. | undefined
+2025-01-31 08:07:35 | info | 	Poll sepolia, txHash 0x9fc93d68b871ddacfeb5cfbeb1586bf572bff32484f29249fa208eef21b51467, status 0. | undefined
+2025-01-31 08:07:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:39 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:07:39 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:07:41 | info | 	Poll sepolia, txHash 0x9fc93d68b871ddacfeb5cfbeb1586bf572bff32484f29249fa208eef21b51467, status 1. | undefined
+2025-01-31 08:07:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:44 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:07:44 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:07:46 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:07:46 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:07:46 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:07:46 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:07:57 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:57 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:07:57 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:07:57 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:08:15 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:08:15 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:08:17 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:08:17 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:08:17 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:08:18 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:08:18 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:08:21 | info | 	Transaction Details: "0x33c1a98577b96b774f306b7bf1f5133b9110442528d7a76b92eea042f2e3f09f" | undefined
+2025-01-31 08:08:21 | info | 	Trade has been executed, txHash is 0x33c1a98577b96b774f306b7bf1f5133b9110442528d7a76b92eea042f2e3f09f, nonce is 253, gasPrice is 33. | undefined
+2025-01-31 08:08:27 | info | 	Poll sepolia, txHash 0x33c1a98577b96b774f306b7bf1f5133b9110442528d7a76b92eea042f2e3f09f, status 1. | undefined
+2025-01-31 08:08:29 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:08:29 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:08:30 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:08:30 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:08:31 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:08:31 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:08:31 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:08:31 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:08:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:08:59 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:00 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:00 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:00 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:00 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:00 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:01 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:03 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:03 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:03 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:09:03 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:09:03 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:09:03 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:09:03 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:03 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:04 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:04 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:06 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:09:07 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:07 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:08 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:09:08 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:09:08 | info | 	Transaction Details: "0x94cbd82bb01f22dc3affb10cc305ef4aebb25f6a0049c593c971801bff214f8a" | undefined
+2025-01-31 08:09:08 | info | 	Trade has been executed, txHash is 0x94cbd82bb01f22dc3affb10cc305ef4aebb25f6a0049c593c971801bff214f8a, nonce is 254, gasPrice is 33. | undefined
+2025-01-31 08:09:16 | info | 	Poll sepolia, txHash 0x94cbd82bb01f22dc3affb10cc305ef4aebb25f6a0049c593c971801bff214f8a, status 1. | undefined
+2025-01-31 08:09:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:20 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:20 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:21 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:09:21 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:09:21 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:09:21 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:09:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:32 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:34 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:35 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:09:35 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:09:37 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:09:39 | info | 	Transaction Details: "0x21bfb1f37b1e56ed384baef15c1b7acc07c2e6a35c09b1b9d56108a96158aa00" | undefined
+2025-01-31 08:09:39 | info | 	Trade has been executed, txHash is 0x21bfb1f37b1e56ed384baef15c1b7acc07c2e6a35c09b1b9d56108a96158aa00, nonce is 255, gasPrice is 33. | undefined
+2025-01-31 08:09:46 | info | 	Poll sepolia, txHash 0x21bfb1f37b1e56ed384baef15c1b7acc07c2e6a35c09b1b9d56108a96158aa00, status 0. | undefined
+2025-01-31 08:09:52 | info | 	Poll sepolia, txHash 0x21bfb1f37b1e56ed384baef15c1b7acc07c2e6a35c09b1b9d56108a96158aa00, status 1. | undefined
+2025-01-31 08:09:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:09:55 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:09:56 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:09:57 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:09:57 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:09:57 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:09:57 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:10:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:07 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:10:07 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:10:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:10 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:10:10 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:10:11 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:10:11 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:10:13 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:10:15 | info | 	Transaction Details: "0x12c0a483aaf7cae1e93fe789267481aab288ae3731dc924add0f62477710d4a5" | undefined
+2025-01-31 08:10:15 | info | 	Trade has been executed, txHash is 0x12c0a483aaf7cae1e93fe789267481aab288ae3731dc924add0f62477710d4a5, nonce is 256, gasPrice is 33. | undefined
+2025-01-31 08:10:16 | info | 	150 request(s) sent in last 300 seconds. | undefined
+2025-01-31 08:10:23 | info | 	Poll sepolia, txHash 0x12c0a483aaf7cae1e93fe789267481aab288ae3731dc924add0f62477710d4a5, status 0. | undefined
+2025-01-31 08:10:29 | info | 	Poll sepolia, txHash 0x12c0a483aaf7cae1e93fe789267481aab288ae3731dc924add0f62477710d4a5, status 1. | undefined
+2025-01-31 08:10:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:32 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:10:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:10:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:34 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:10:34 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:10:34 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:10:34 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:10:34 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:10:35 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:10:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:10:48 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:10:48 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:10:49 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:10:49 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:10:51 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:10:54 | info | 	Transaction Details: "0xd473737fa61440d8bdc78eafcebb9234436c47e87ff4a1ff66c3e3b3d9cedce3" | undefined
+2025-01-31 08:10:54 | info | 	Trade has been executed, txHash is 0xd473737fa61440d8bdc78eafcebb9234436c47e87ff4a1ff66c3e3b3d9cedce3, nonce is 257, gasPrice is 33. | undefined
+2025-01-31 08:11:01 | info | 	Poll sepolia, txHash 0xd473737fa61440d8bdc78eafcebb9234436c47e87ff4a1ff66c3e3b3d9cedce3, status 0. | undefined
+2025-01-31 08:11:04 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:04 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:05 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:11:05 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:05 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:11:05 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:11:06 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:11:07 | info | 	Poll sepolia, txHash 0xd473737fa61440d8bdc78eafcebb9234436c47e87ff4a1ff66c3e3b3d9cedce3, status 1. | undefined
+2025-01-31 08:11:11 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:11 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:11 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:11:11 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:11:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:12 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:11:13 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:11:13 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:11:13 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:11:13 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:11:13 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:11:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:25 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:25 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:11:25 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:11:27 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:11:27 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:11:28 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:11:30 | info | 	Transaction Details: "0xbd047ae225a39fb2c7d5b1d71d4652c0aaae15329522f46ca6244b0993daf41a" | undefined
+2025-01-31 08:11:30 | info | 	Trade has been executed, txHash is 0xbd047ae225a39fb2c7d5b1d71d4652c0aaae15329522f46ca6244b0993daf41a, nonce is 258, gasPrice is 33. | undefined
+2025-01-31 08:11:35 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:35 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:35 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:11:35 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:11:37 | info | 	Poll sepolia, txHash 0xbd047ae225a39fb2c7d5b1d71d4652c0aaae15329522f46ca6244b0993daf41a, status 1. | undefined
+2025-01-31 08:11:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:11:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:11:41 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:11:41 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:11:41 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:11:41 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:11:54 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:54 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:11:54 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:11:54 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:11:56 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:11:56 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:11:58 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:12:00 | info | 	Transaction Details: "0xd44a450de4b9a76301c7efb1cf034104ca653b9b0324461d352cc42230caa8a5" | undefined
+2025-01-31 08:12:00 | info | 	Trade has been executed, txHash is 0xd44a450de4b9a76301c7efb1cf034104ca653b9b0324461d352cc42230caa8a5, nonce is 259, gasPrice is 33. | undefined
+2025-01-31 08:12:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:06 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:12:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:12:06 | info | 	Poll sepolia, txHash 0xd44a450de4b9a76301c7efb1cf034104ca653b9b0324461d352cc42230caa8a5, status 0. | undefined
+2025-01-31 08:12:12 | info | 	Poll sepolia, txHash 0xd44a450de4b9a76301c7efb1cf034104ca653b9b0324461d352cc42230caa8a5, status 0. | undefined
+2025-01-31 08:12:31 | info | 	Poll sepolia, txHash 0xd44a450de4b9a76301c7efb1cf034104ca653b9b0324461d352cc42230caa8a5, status 1. | undefined
+2025-01-31 08:12:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:35 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:12:35 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:12:36 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:12:36 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:12:36 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:12:36 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:12:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:12:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:12:46 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:46 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:47 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:12:47 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:12:48 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:12:48 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:12:49 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:49 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:12:50 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:12:50 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:12:52 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:12:52 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:12:54 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:12:57 | info | 	Transaction Details: "0xb6c1cf3d2a874bf5c8eafce1f20e963e2fbed91c9f07a891fb968a3652c6bea9" | undefined
+2025-01-31 08:12:57 | info | 	Trade has been executed, txHash is 0xb6c1cf3d2a874bf5c8eafce1f20e963e2fbed91c9f07a891fb968a3652c6bea9, nonce is 260, gasPrice is 33. | undefined
+2025-01-31 08:13:03 | info | 	Poll sepolia, txHash 0xb6c1cf3d2a874bf5c8eafce1f20e963e2fbed91c9f07a891fb968a3652c6bea9, status 1. | undefined
+2025-01-31 08:13:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:07 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:13:07 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:13:07 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:07 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:08 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:13:08 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:13:08 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:13:08 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:13:08 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:13:08 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:13:14 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:14 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:14 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:13:14 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:13:16 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:16 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:17 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:13:17 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:13:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:19 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:20 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:13:20 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:13:22 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:13:22 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:13:24 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:13:27 | info | 	Transaction Details: "0x64e64947303deaac40f663b4b391367656409571fbda8b956ba5079a074d86bd" | undefined
+2025-01-31 08:13:27 | info | 	Trade has been executed, txHash is 0x64e64947303deaac40f663b4b391367656409571fbda8b956ba5079a074d86bd, nonce is 261, gasPrice is 33. | undefined
+2025-01-31 08:13:34 | info | 	Poll sepolia, txHash 0x64e64947303deaac40f663b4b391367656409571fbda8b956ba5079a074d86bd, status 0. | undefined
+2025-01-31 08:13:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:41 | info | 	Poll sepolia, txHash 0x64e64947303deaac40f663b4b391367656409571fbda8b956ba5079a074d86bd, status 1. | undefined
+2025-01-31 08:13:41 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:13:41 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:13:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:44 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:13:44 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:13:45 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:13:45 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:13:45 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:13:45 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:13:56 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:56 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:13:57 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:13:57 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:13:59 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:13:59 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:14:01 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:14:04 | info | 	Transaction Details: "0xdc155b692c7ac8914d4cc6fc2fe44e9a3ac1031e9b15542a33c38442a9ef537c" | undefined
+2025-01-31 08:14:04 | info | 	Trade has been executed, txHash is 0xdc155b692c7ac8914d4cc6fc2fe44e9a3ac1031e9b15542a33c38442a9ef537c, nonce is 262, gasPrice is 33. | undefined
+2025-01-31 08:14:11 | info | 	Poll sepolia, txHash 0xdc155b692c7ac8914d4cc6fc2fe44e9a3ac1031e9b15542a33c38442a9ef537c, status 0. | undefined
+2025-01-31 08:14:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:12 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:12 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:14:12 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:14:18 | info | 	Poll sepolia, txHash 0xdc155b692c7ac8914d4cc6fc2fe44e9a3ac1031e9b15542a33c38442a9ef537c, status 1. | undefined
+2025-01-31 08:14:21 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:21 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:21 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:14:22 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:14:23 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:14:23 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:14:23 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:14:23 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:14:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:37 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:37 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:14:37 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:14:57 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:14:57 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:14:57 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:57 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:58 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:58 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:14:58 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:14:58 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:14:58 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:14:58 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:14:59 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:15:01 | info | 	Transaction Details: "0x6be21291bfd96f0c080010807a357acd47c5a401a9be796ac275612af2a88f4f" | undefined
+2025-01-31 08:15:01 | info | 	Trade has been executed, txHash is 0x6be21291bfd96f0c080010807a357acd47c5a401a9be796ac275612af2a88f4f, nonce is 263, gasPrice is 33. | undefined
+2025-01-31 08:15:07 | info | 	Poll sepolia, txHash 0x6be21291bfd96f0c080010807a357acd47c5a401a9be796ac275612af2a88f4f, status 0. | undefined
+2025-01-31 08:15:09 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:09 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:10 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:15:10 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:15:16 | info | 	Poll sepolia, txHash 0x6be21291bfd96f0c080010807a357acd47c5a401a9be796ac275612af2a88f4f, status 0. | undefined
+2025-01-31 08:15:16 | info | 	171 request(s) sent in last 300 seconds. | undefined
+2025-01-31 08:15:27 | info | 	Poll sepolia, txHash 0x6be21291bfd96f0c080010807a357acd47c5a401a9be796ac275612af2a88f4f, status 1. | undefined
+2025-01-31 08:15:29 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:29 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:29 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:29 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:30 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:15:30 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:15:30 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:15:30 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:15:30 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:30 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:31 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:15:31 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:15:31 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:15:31 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:15:31 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:15:31 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:15:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:43 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:43 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:15:43 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:15:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:15:46 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:15:46 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:15:46 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:15:47 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:15:48 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:15:50 | info | 	Transaction Details: "0x9aa4f97034d51b96d8d9ddf172a4887cf96338f810b3e5d9e59165911fc751b6" | undefined
+2025-01-31 08:15:50 | info | 	Trade has been executed, txHash is 0x9aa4f97034d51b96d8d9ddf172a4887cf96338f810b3e5d9e59165911fc751b6, nonce is 264, gasPrice is 33. | undefined
+2025-01-31 08:15:56 | info | 	Poll sepolia, txHash 0x9aa4f97034d51b96d8d9ddf172a4887cf96338f810b3e5d9e59165911fc751b6, status 0. | undefined
+2025-01-31 08:16:02 | info | 	Poll sepolia, txHash 0x9aa4f97034d51b96d8d9ddf172a4887cf96338f810b3e5d9e59165911fc751b6, status 1. | undefined
+2025-01-31 08:16:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:16:05 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:16:06 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:16:06 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:16:06 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:16:06 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:16:29 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:29 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:29 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:16:29 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:16:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:16:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:16:36 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:36 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:36 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:16:36 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:36 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:36 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:16:36 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:16:36 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:16:37 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:16:37 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:16:38 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:16:39 | info | 	Transaction Details: "0xb3d241c2a6c599f77f675e061e204724277a916e96522ed7a9dcd0d6f1a9e106" | undefined
+2025-01-31 08:16:39 | info | 	Trade has been executed, txHash is 0xb3d241c2a6c599f77f675e061e204724277a916e96522ed7a9dcd0d6f1a9e106, nonce is 265, gasPrice is 33. | undefined
+2025-01-31 08:16:46 | info | 	Poll sepolia, txHash 0xb3d241c2a6c599f77f675e061e204724277a916e96522ed7a9dcd0d6f1a9e106, status 0. | undefined
+2025-01-31 08:16:51 | info | 	Poll sepolia, txHash 0xb3d241c2a6c599f77f675e061e204724277a916e96522ed7a9dcd0d6f1a9e106, status 1. | undefined
+2025-01-31 08:16:53 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:53 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:16:54 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:16:54 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:16:55 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:16:55 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:16:55 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:16:55 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:17:02 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:02 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:03 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:17:03 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:17:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:06 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:17:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:17:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:07 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:17:07 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:17:08 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:17:08 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:17:10 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:17:12 | info | 	Transaction Details: "0xd74961b1e1292f037ea61dbc6840998a20edb5eb02f95c9826688b9b7cabf37d" | undefined
+2025-01-31 08:17:12 | info | 	Trade has been executed, txHash is 0xd74961b1e1292f037ea61dbc6840998a20edb5eb02f95c9826688b9b7cabf37d, nonce is 266, gasPrice is 33. | undefined
+2025-01-31 08:17:12 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:12 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:13 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:17:13 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:17:18 | info | 	Poll sepolia, txHash 0xd74961b1e1292f037ea61dbc6840998a20edb5eb02f95c9826688b9b7cabf37d, status 0. | undefined
+2025-01-31 08:17:24 | info | 	Poll sepolia, txHash 0xd74961b1e1292f037ea61dbc6840998a20edb5eb02f95c9826688b9b7cabf37d, status 0. | undefined
+2025-01-31 08:17:30 | info | 	Poll sepolia, txHash 0xd74961b1e1292f037ea61dbc6840998a20edb5eb02f95c9826688b9b7cabf37d, status 1. | undefined
+2025-01-31 08:17:32 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:32 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:32 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:17:32 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:17:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:17:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:17:34 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:17:34 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:17:34 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:17:34 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:17:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:40 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:17:41 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:17:41 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:18:00 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:00 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:01 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:18:01 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:18:03 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:18:03 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:18:05 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:18:07 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:07 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:08 | info | 	Transaction Details: "0x6863dc0e0ecfc69c3c398d2fd45fbda1a3ec14f895e68cbecdb67e5fdd09fe80" | undefined
+2025-01-31 08:18:08 | info | 	Trade has been executed, txHash is 0x6863dc0e0ecfc69c3c398d2fd45fbda1a3ec14f895e68cbecdb67e5fdd09fe80, nonce is 267, gasPrice is 33. | undefined
+2025-01-31 08:18:08 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:18:08 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:18:17 | info | 	Poll sepolia, txHash 0x6863dc0e0ecfc69c3c398d2fd45fbda1a3ec14f895e68cbecdb67e5fdd09fe80, status 1. | undefined
+2025-01-31 08:18:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:33 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:33 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:18:33 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:18:34 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-01-31 08:18:34 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-01-31 08:18:34 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-01-31 08:18:34 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:18:44 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:44 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:44 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:18:44 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:18:45 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:45 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:45 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:18:46 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:18:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:46 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:18:46 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-01-31 08:18:46 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-01-31 08:18:48 | info | 	Converting amount for UXXX1 (decimals: 6): 1000 -> 1000.000000 -> 1000000000 | undefined
+2025-01-31 08:18:48 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-01-31 08:18:49 | info | 	Expected execution price is 1.033738, limit price is undefined. | undefined
+2025-01-31 08:18:51 | info | 	Transaction Details: "0xff247eeafbea6d77af1e8d3bcda300a70a1bc1d155ea5bfea0197044d6f248b0" | undefined
+2025-01-31 08:18:51 | info | 	Trade has been executed, txHash is 0xff247eeafbea6d77af1e8d3bcda300a70a1bc1d155ea5bfea0197044d6f248b0, nonce is 268, gasPrice is 33. | undefined
+2025-01-31 08:18:57 | info | 	Poll sepolia, txHash 0xff247eeafbea6d77af1e8d3bcda300a70a1bc1d155ea5bfea0197044d6f248b0, status 0. | undefined
+2025-01-31 08:19:03 | info | 	Poll sepolia, txHash 0xff247eeafbea6d77af1e8d3bcda300a70a1bc1d155ea5bfea0197044d6f248b0, status 1. | undefined
+2025-01-31 08:19:05 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:19:05 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:19:06 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:19:06 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:19:14 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:19:14 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:19:15 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:19:15 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:19:34 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:19:34 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:19:34 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:19:34 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:20:16 | info | 	132 request(s) sent in last 300 seconds. | undefined
+2025-01-31 08:21:07 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:21:07 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:21:07 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:21:08 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:21:16 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:21:16 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:21:17 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:21:17 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:21:35 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:21:35 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:21:36 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:21:36 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:23:09 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:23:09 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:23:10 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:23:10 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:23:18 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:23:18 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:23:19 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:23:19 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:23:37 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:23:37 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:23:38 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:23:38 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:25:11 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:25:11 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:25:12 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:25:12 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:25:16 | info | 	14 request(s) sent in last 300 seconds. | undefined
+2025-01-31 08:25:20 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:25:20 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:25:21 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:25:21 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:25:39 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:25:39 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:25:40 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:25:40 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:27:14 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:27:14 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:27:14 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:27:15 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:27:23 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:27:23 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:27:24 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:27:24 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:27:42 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:27:42 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:27:42 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:27:43 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:29:16 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:29:16 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-01-31 08:29:17 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-01-31 08:29:17 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-02-01 12:46:39 | info | 	Gateway Version: 2.2.0 | undefined
+2025-02-01 12:46:39 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-02-01 12:46:39 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-02-01 12:46:39 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined
+2025-02-01 12:46:52 | info | 	Loading leading nonce [object Object] for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:46:52 | info | 	Loading leading nonce [object Object] for address 0xB859d90A273BcFF2BC682FBB197065C0762F0Bf1. | undefined
+2025-02-01 12:46:56 | error | 	Token not supported: GXX1,UXXX1 | Error: Token not supported: GXX1,UXXX1
+    at EVMController.<anonymous> (/home/gateway/dist/src/chains/ethereum/evm.controllers.js:248:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/gateway/dist/src/chains/ethereum/evm.controllers.js:5:58)
+2025-02-01 12:47:49 | error | 	Token not supported: GXX1_UXXX1 | Error: Token not supported: GXX1_UXXX1
+    at EVMController.<anonymous> (/home/gateway/dist/src/chains/ethereum/evm.controllers.js:248:23)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/gateway/dist/src/chains/ethereum/evm.controllers.js:5:58)
+2025-02-01 12:47:57 | info | 	Calling approve method called for spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 requesting allowance 115792089237316195423570985008687907853269984665640564039457584007913129639935 from owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:47:57 | info | 	Providing the next nonce 269 for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:48:02 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:05 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:07 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:09 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:11 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:13 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:14 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 2. | undefined
+2025-02-01 12:48:16 | info | 	Poll sepolia, txHash 0xc81fb32fc5247097308cb09e949f28c2d25adc75576c03593f7953a65815d139, status 1. | undefined
+2025-02-01 12:48:24 | info | 	Calling approve method called for spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 requesting allowance 115792089237316195423570985008687907853269984665640564039457584007913129639935 from owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:48:24 | info | 	Providing the next nonce 270 for address 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:48:30 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:33 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:35 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:36 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:37 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:39 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:40 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:42 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:44 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:46 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:47 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:48 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:49 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:51 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:52 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:53 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:55 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:56 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:48:58 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:49:00 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:49:02 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 2. | undefined
+2025-02-01 12:49:36 | info | 	Poll sepolia, txHash 0x6527ad0d0ea6d084b22fe2f26107a8315e6d98a440312d91180e95a1c7735b05, status 1. | undefined
+2025-02-01 12:50:33 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:33 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:33 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-02-01 12:50:33 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-02-01 12:50:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:34 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:50:34 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:50:38 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:38 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:39 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:50:39 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:50:41 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:50:41 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:50:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:47 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:50:48 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:50:48 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:50:49 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:50:49 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:50:49 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:50:49 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:51:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:05 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:05 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:51:05 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:51:06 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:51:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:51:07 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:51:07 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:51:07 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:51:07 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:51:21 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:21 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:21 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:51:21 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:51:22 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:51:22 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:51:22 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:51:22 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:51:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:34 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:35 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:51:35 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:51:38 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:38 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:38 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:51:38 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:51:39 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:51:39 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:51:39 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:51:39 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:51:52 | info | 	114 request(s) sent in last 300 seconds. | undefined
+2025-02-01 12:51:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:55 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:51:55 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:51:55 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:51:56 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:51:56 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:51:56 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:51:56 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:52:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:06 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:06 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:52:06 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:52:10 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:10 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:11 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:52:11 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:52:12 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:52:12 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:52:12 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:52:12 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:52:26 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:26 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:27 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:52:27 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:52:28 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:52:28 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:52:28 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:52:28 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:52:38 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:38 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:38 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-02-01 12:52:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:39 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-02-01 12:52:39 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:52:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:52:41 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:41 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:41 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:52:42 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:52:43 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:52:43 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:52:43 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:52:43 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:52:57 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:57 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:52:58 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:52:58 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:52:58 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:52:58 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:52:58 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:52:58 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:53:07 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:07 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:08 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:53:08 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:53:11 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:11 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:12 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:53:12 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:53:13 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:53:13 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:53:13 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:53:13 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:53:26 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:26 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:26 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:53:26 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:53:27 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:53:27 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:53:27 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:53:27 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:53:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:39 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:40 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:53:40 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:53:41 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:41 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:42 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:53:42 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:53:43 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:53:43 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:53:43 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:53:43 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:53:56 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:56 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:53:57 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:53:57 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:53:58 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:53:58 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:53:58 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:53:58 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:54:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:54:09 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:54:10 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:54:10 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:54:15 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:54:15 | info | 	Requesting balance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
+2025-02-01 12:54:16 | info | 	Raw balance of 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 3696934 | undefined
+2025-02-01 12:54:16 | info | 	Raw balance of 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2 for 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b: 42932755731 | undefined
+2025-02-01 12:54:17 | info | 	Converting amount for GXX1 (decimals: 2): 1 -> 1.00 -> 100 | undefined
+2025-02-01 12:54:17 | info | 	Fetching pair data for 0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2-0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20. | undefined
+2025-02-01 12:54:17 | info | 	Converting amount for UXXX1 (decimals: 6): 1 -> 1.000000 -> 1000000 | undefined
+2025-02-01 12:54:17 | info | 	Fetching pair data for 0x6DA08364fbEEe5A2ee8E596F3Db6170B147Cad20-0x9D6664Ad3bbEf76a2A0DF759DaDBF29D8c8D54E2. | undefined
+2025-02-01 12:56:52 | info | 	52 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:01:52 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:06:52 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:11:52 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:16:52 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:21:35 | error | 	unhandledRejection: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[],\"id\":232,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+Error: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[],\"id\":232,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) | Error: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[],\"id\":232,\"jsonrpc\":\"2.0\"}", requestMethod="POST", serverError={"errno":-3001,"code":"EAI_AGAIN","syscall":"getaddrinfo","hostname":"rpc.ankr.com"}, url="https://rpc.ankr.com/eth_sepolia", code=SERVER_ERROR, version=web/5.7.1)
+    at Logger.makeError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/gateway/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at /home/gateway/node_modules/@ethersproject/web/lib/index.js:260:36
+    at step (/home/gateway/node_modules/@ethersproject/web/lib/index.js:33:23)
+    at Object.throw (/home/gateway/node_modules/@ethersproject/web/lib/index.js:14:53)
+    at rejected (/home/gateway/node_modules/@ethersproject/web/lib/index.js:6:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-02-01 01:21:52 | info | 	5 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:26:52 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:31:52 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:36:52 | info | 	0 request(s) sent in last 300 seconds. | undefined
+2025-02-01 01:41:52 | info | 	0 request(s) sent in last 300 seconds. | undefined

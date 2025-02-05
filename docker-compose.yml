@@ -1,11 +1,7 @@
-version: "3.9"
 services:
   hummingbot:
     container_name: hummingbot
     image: hummingbot/hummingbot:latest
-#    build: Uncomment this and comment image if you want to build it locally
-#      context: .
-#      dockerfile: Dockerfile
     volumes:
       - ./conf:/home/hummingbot/conf
       - ./conf/connectors:/home/hummingbot/conf/connectors
@@ -17,6 +13,8 @@ services:
       - ./certs:/home/hummingbot/certs
       - ./scripts:/home/hummingbot/scripts
       - ./controllers:/home/hummingbot/controllers
+      - ./hummingbot/core/gateway:/home/hummingbot/hummingbot/core/gateway
+
     logging:
       driver: "json-file"
       options:
@@ -32,7 +30,7 @@ services:
 
   gateway:
    container_name: gateway
-   image: hummingbot/gateway:latest
+   image: hummingbot/gateway:Log
    ports:
      - "15888:15888"
      - "8080:8080"
@@ -43,3 +41,4 @@ services:
      - "./certs:/home/gateway/certs"
    environment:
      - GATEWAY_PASSPHRASE=a
+

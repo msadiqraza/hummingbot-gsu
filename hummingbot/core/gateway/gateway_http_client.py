@@ -492,6 +492,7 @@ class GatewayHttpClient:
         nonce: Optional[int] = None,
         max_fee_per_gas: Optional[int] = None,
         max_priority_fee_per_gas: Optional[int] = None,
+        allowed_slippage: Optional[str] = None,
         pool_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         # XXX(martin_kou): The amount is always output with 18 decimal places.
@@ -505,8 +506,9 @@ class GatewayHttpClient:
             "side": side.name,
             "amount": f"{amount:.18f}",
             "limitPrice": f"{price:.20f}",
-            "allowedSlippage": "0/1",  # hummingbot applies slippage itself
         }
+        if allowed_slippage not in ["", None]:
+            request_payload["allowedSlippage"] = allowed_slippage
         if pool_id not in ["", None]:
             request_payload["poolId"] = pool_id
         if nonce is not None:
@@ -515,6 +517,8 @@ class GatewayHttpClient:
             request_payload["maxFeePerGas"] = str(max_fee_per_gas)
         if max_priority_fee_per_gas is not None:
             request_payload["maxPriorityFeePerGas"] = str(max_priority_fee_per_gas)
+
+        print(f"request_payload: {request_payload}")
         return await self.api_request("post", "amm/trade", request_payload)
 
     async def amm_estimate_gas(

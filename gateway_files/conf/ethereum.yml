@@ -1,7 +1,7 @@
 networks:
   arbitrum:
     chainID: 42161
-    nodeURL: https://rpc.ankr.com/arbitrum
+    nodeURL: https://host.docker.internal:8545
     tokenListType: FILE
     tokenListSource: /home/gateway/conf/lists/arbitrum_coingecko_20230610.json
     nativeCurrencySymbol: ETH
@@ -14,7 +14,7 @@ networks:
     nativeCurrencySymbol: ETH
   mainnet:
     chainID: 1
-    nodeURL: https://sepolia.infura.io/v3/c2277863d49b42909d1a6b452b4d2553
+    nodeURL: http://host.docker.internal:8545
     tokenListType: FILE
     nativeCurrencySymbol: ETH
     tokenListSource: /home/gateway/conf/lists/ethereum_coingecko_20230610.json
