@@ -517,3 +517,7 @@ Error: missing response (requestBody="{\"method\":\"eth_gasPrice\",\"params\":[]
 2025-02-05 11:36:45 | info | 	Requesting spender 0xBA12222222228d8Ba445958a75a0704d566BF2C8 allowance for owner 0x1caF820bCb6CEFc9deCad36f11fAF4024A9bcF0b. | undefined
 2025-02-05 11:36:45 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
 2025-02-05 11:36:45 | info | 	115792089237316195423570985008687907853269984665640564039457584007913129639935 | undefined
+2025-02-06 01:41:01 | info | 	Gateway Version: 2.2.0 | undefined
+2025-02-06 01:41:01 | info | 	⚡️ Starting Gateway API on port 15888... | undefined
+2025-02-06 01:41:01 | info | 	The gateway server is secured behind HTTPS. | undefined
+2025-02-06 01:41:01 | info | 	⚡️ Swagger listening on port 8080. Read the Gateway API documentation at 127.0.0.1:8080 | undefined

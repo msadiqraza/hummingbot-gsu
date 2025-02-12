@@ -185,9 +185,9 @@ class AmmPriceExample(ScriptStrategyBase):
             # 3rd Step `find action to take`
             base, quote, rate_spread = self.find_action(base_diff, quote_diff)
             kind = None
-            if base == self.base:
+            if base == self.quote:
                 kind = "0"
-            elif base == self.quote:
+            elif base == self.base:
                 kind = "1"
 
             # 3rd Step `check for conflict`  
@@ -196,7 +196,6 @@ class AmmPriceExample(ScriptStrategyBase):
                 self.logger().info(f"Conflict detected for {base} to {quote}. Skipping. (1) {conflict}")
                 self.complete_async_task()
                 return
-
 
             # 4th Step `calculate amount to sell`
             amount, price = await self.calculate_sell_amount(base, quote, rate_spread)
@@ -278,9 +277,7 @@ class AmmPriceExample(ScriptStrategyBase):
                 return True, base_diff, quote_diff
 
             self.logger().info("No profitable opportunities found above thresholds")
-            # return False, Decimal(0), Decimal(0)
-            return True, base_diff, quote_diff
-            
+            return False, Decimal(0), Decimal(0)          
 
         except Exception as e:
             self.logger().error(f"Error in profit calculation: {str(e)}")
@@ -315,8 +312,7 @@ class AmmPriceExample(ScriptStrategyBase):
             self.logger().info(
                 f"Minimum order amount {minimum_order_amount} is higher than maximum order amount {self.config.maximum_order_amount}. Skipping."
             )
-            # return Decimal(0), Decimal(0)
-            return Decimal(1000), Decimal(1)
+            return Decimal(0), Decimal(0)
 
         self.logger().info(f"Minimum order amount {minimum_order_amount}")
 
@@ -677,8 +673,8 @@ class AmmPriceExample(ScriptStrategyBase):
             """
             Callback for when a message is received from the WebSocket.
             """
-            self.logger().info(f"Checking for conflicting transactions {message}")
             self.logger().info(f"self.ws_pending_txs: {self.ws_pending_txs}")
+            self.logger().info(f"Checking for conflicting transactions {message}")
 
             try:
                 message_json = json.loads(message)
@@ -699,6 +695,8 @@ class AmmPriceExample(ScriptStrategyBase):
 
                     if bot_gas_price < tx_gas_price:
                         conflict = self.decode_input( transaction['input'], transaction['hash'])
+                        self.logger().info(f"self.ws_pending_txs: {self.ws_pending_txs}")
+                        
                     else:
                         self.logger().info("trading_bot_gas is higher than this_tx_gas. Not a conflict")
                 else:
@@ -746,9 +744,8 @@ class AmmPriceExample(ScriptStrategyBase):
             """
             Callback for when a message is received from the WebSocket.
             """
-           
-            self.logger().info(f"Checking for mined transactions: {message}")
             self.logger().info(f"self.ws_pending_txs: {self.ws_pending_txs}")
+            self.logger().info(f"Checking for mined transactions: {message}")
             try:
                 message_json = json.loads(message)
                                 
@@ -761,6 +758,8 @@ class AmmPriceExample(ScriptStrategyBase):
                     for key in ["0", "1"]:
                         if txs_hash in self.ws_pending_txs[key]:
                             self.ws_pending_txs[key].remove(str(txs_hash))
+                            self.logger().info(f"self.ws_pending_txs: {self.ws_pending_txs}")
+                            
                 else:
                     self.logger().info("No result in message")
 
